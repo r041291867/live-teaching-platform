@@ -5,13 +5,13 @@
     <meta charset="utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link href="css/loginStyle.css" rel="stylesheet" th:href="@{/css/loginStyle.css}"/>
-    <title>学生注册</title>
-    <style>
+    <title>學生註冊</title>
+    <!-- <style>
         body {
             background-image: linear-gradient(to left, rgb(119, 129, 250), rgb(70, 177, 234));
             margin-top: 150px !important;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -20,43 +20,43 @@
         <div class="col-md-10 offset=md-1">
             <div class="row">
                 <div class="col-md-5 register-left">
-                    <h2>“在线教学直播平台”</h2>
-                    <p>在线教学平台是一款基于OBS直播推流的线上平台，主要用于教师以直播的方式与学生进行在线"教"与"学"，打破了传统的线下教学模式，开启了一种新颖的学习方式。</p>
-                    <p>已有账号？</p>
+                    <h2>“線上教學串流平台”</h2>
+                    <p>線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學生線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
+                    <p>已有帳號？</p>
                     <a href="login.html" th:href="@{/login}">
                         <button class="btn btn-dark btn-secondary"
-                                type="button">返回登录
+                                type="button">登入帳號
                         </button>
                     </a>
                 </div>
                 <div class="col-md-7 register-right">
-                    <h4>学生注册</h4>
+                    <h4>學生註冊</h4>
                     <h4 style="color: red; text-align: center" th:text="${message}"></h4>
                     <form class="register-form" method="post" th:action="@{/register/student}">
                         <div class="form-group">
-                            <input class="form-control" name="id" placeholder="学号" required type="text"/>
+                            <input class="form-control" name="id" placeholder="學號" required type="text"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="nickname" placeholder="昵称" required type="text"/>
+                            <input class="form-control" name="nickname" placeholder="暱稱" required type="text"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="email" placeholder="电子邮箱" required type="email"/>
+                            <input class="form-control" name="email" placeholder="電子信箱" required type="email"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="password" placeholder="密码" required type="password"/>
+                            <input class="form-control" name="password" placeholder="密碼" required type="password"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="grade" placeholder="年级：2016" required type="grade"/>
+                            <input class="form-control" name="grade" placeholder="年級：2016" required type="grade"/>
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="majorId" required>
                                 <option th:each="major:${majorList}" th:text="${major.name}"
                                         th:value="${major.id}"
-                                        value="1">软件工程
+                                        value="1">軟體工程
                                 </option>
                             </select>
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">注册</button>
+                        <button class="btn btn-primary btn-block" type="submit">註冊</button>
                     </form>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>直播列表</title>
+    <title>串流列表</title>
     <meta charset="UTF-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
@@ -17,7 +17,7 @@
 <div class="container">
     <div class="row infoVideo align-items-center" th:each="liveVM:${liveVMList}">
         <div>
-            <img src="/img/teacher.jpg">
+            <img src="/img/teacher.png">
         </div>
         <div class="borderLine"></div>
         <div class="col-8 rightText">
@@ -25,18 +25,18 @@
                 <strong th:text="${liveVM.name}">Div+CSS布局</strong>
             </div>
             <p>
-                课程：<span class="class-category" th:text="${liveVM.course.name}">网页制作</span>
-                专业：<span th:text="${liveVM.major.name}">软件工程</span>
-                年级：<span th:text="${liveVM.grade}">2016</span>
-                老师：<span th:text="${liveVM.teacher.nickname}">123</span>
+                課程：<span class="class-category" th:text="${liveVM.course.name}">網頁製作</span>
+                專業：<span th:text="${liveVM.major.name}">軟體工程</span>
+                年級：<span th:text="${liveVM.grade}">2016</span>
+                老師：<span th:text="${liveVM.teacher.nickname}">123</span>
             </p>
             <p>
-                直播日期：<span th:text="${#dates.format(liveVM.date, 'yyyy-MM-dd')}">2016/6/6</span>
-                开始时间：<span th:text="${liveVM.startTime}">19:00-20:00</span>
-                直播长度：<span th:text="${liveVM.length}">60 分钟</span>
+                串流日期：<span th:text="${#dates.format(liveVM.date, 'yyyy-MM-dd')}">2016/6/6</span>
+                開始時間：<span th:text="${liveVM.startTime}">19:00-20:00</span>
+                串流長度（分鐘）：<span th:text="${liveVM.length}">60 分鐘</span>
             </p>
         </div>
-        <a class=" btn btn-danger " href="#" th:href="@{/live/}+${liveVM.teacher.id}+@{/}+${liveVM.id}">进入直播室</a>
+        <a class=" btn btn-danger " href="#" th:href="@{/live/}+${liveVM.teacher.id}+@{/}+${liveVM.id}">進入頻道</a>
     </div>
 </div>
 </body>

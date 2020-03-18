@@ -60,7 +60,7 @@ public class UserController {
         if (student == null) {
             return "redirect:/";
         }
-        // 过滤时间和专业和年级
+        // 过滤时间和專業和年級
         Date yesterday = new Date(System.currentTimeMillis() - 86400000);
         List<Live> liveList = liveService.findByDateAfterAndMajorIdAndGrade(yesterday, student.getMajorId(), student.getGrade());
         List<LiveViewModel> liveVMList = LiveViewModel.loadFromLiveList(liveConfig.getIp(), liveList, teacherService, courseService, majorDao, liveMaterialService);

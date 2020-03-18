@@ -74,7 +74,7 @@ public class VideoController {
             return "redirect:/user/upload-video";
         }
 
-        // 视频后缀名
+        // 影片后缀名
         String videoFileType = Util.getFileTypeByFilename(videoFilename);
 
         // 只能解码 mp4 文件
@@ -88,7 +88,7 @@ public class VideoController {
         videoService.uploadVideo(videoFile, video.getId() + "." + video.getFileType());
         videoService.save(video);
 
-        // 视频资料
+        // 影片資料
         String materialFilename = videoMaterialFile.getOriginalFilename();
         if (StringUtils.isEmpty(materialFilename)) {
             return "redirect:/user/video-list";

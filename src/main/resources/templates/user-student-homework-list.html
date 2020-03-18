@@ -33,15 +33,15 @@
                             <div></div>
                             <br/>
                             <p>
-                                分数：<span th:text="${homeworkVM.score}">99</span>
+                                分數：<span th:text="${homeworkVM.score}">99</span>
                             </p>
                             <p>
-                                老师评价：<span th:text="${homeworkVM.comment}">评价</span>
+                                老師評價：<span th:text="${homeworkVM.comment}">評價</span>
                             </p>
                             <form action="#" method="post" th:action="@{/homework/}+${homeworkVM.id}">
                                 <input hidden="hidden" name="_method" value="delete"/>
-                                <button class="btn btn-danger" type="submit">删除作业</button>
-                                <a class="btn" href="#" th:href="@{/homework/download/}+${homeworkVM.id}">下载作业</a>
+                                <button class="btn btn-danger" type="submit">删除作業</button>
+                                <a class="btn" href="#" th:href="@{/homework/download/}+${homeworkVM.id}">下載作業</a>
                             </form>
                         </div>
                     </div>

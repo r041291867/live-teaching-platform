@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>首页</title>
+    <title>首頁</title>
     <meta charset="UTF-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
@@ -15,19 +15,31 @@
 
 <!--轮播图-->
 <div class="container banner">
-    <div class="carousel slide" data-interval="2500" data-ride="carousel" id="carousel-banner">
+    <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-banner">
         <ol class="carousel-indicators">
-            <li class="" data-slide-to="0" data-target="#carousel-banner"
+            <!-- <li class="" data-slide-to="0" data-target="#carousel-banner"
                 th:data-slide-to="${iterStatus.index}"
-                th:each="carousel, iterStatus:${carouselList}"></li>
+                th:each="carousel, iterStatus:${carouselList}"></li> -->
+            <li data-target="carousel-banner" data-slide-to="0" class="active"></li>
+            <li data-target="carousel-banner" data-slide-to="1"></li>
+            <li data-target="carousel-banner" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <a class="carousel-item" href="#"
+            <!-- <a class="carousel-item" href="#"
                th:class="${iterStatus.index}==0?'carousel-item active':'carousel-item'"
                th:each="carousel, iterStatus:${carouselList}"
                th:href="@{/video/}+${carousel.videoId}">
                 <img alt="" class="d-block w-100" src="img/bg1.jpg" th:src="@{/img/}+${carousel.imageName}">
-            </a>
+            </a> -->
+            <div class="carousel-item active">
+              <img src="img/bg1.jpg" class="d-block w-100" alt="bg1">
+            </div>
+            <div class="carousel-item">
+              <img src="img/bg4.png" class="d-block w-100" alt="bg2">
+            </div>
+            <div class="carousel-item">
+              <img src="img/bg5.jpg" class="d-block w-100" alt="bg3">
+            </div>
         </div>
         <a class="carousel-control-prev" data-slide="prev" href="#carousel-banner">
             <span class="carousel-control-prev-icon"></span>
@@ -46,40 +58,40 @@
 <div class="container teachers">
     <div class="tetimonials">
         <div class="inner">
-            <h4 class="subtitle">教师介绍</h4>
+            <h4 class="subtitle">教師簡介</h4>
             <div class="border"></div>
             <div class="rowT">
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t1.jpg">
-                        <div class="name">陈建兵</div>
-                        <p>软件开发工程师--十余年的开发经历，精通java、Python、PHP等编程语言，喜欢篮球与摄影，目前在学校作为一名教师进行Python教学。</p>
+                        <div class="name">Raymond Liu</div>
+                        <p>軟件開發工程師--十餘年的開發經歷，精通java、Python、PHP等編程語言，喜歡籃球與攝影，目前在學校作為一名教師進行Python教學。</p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t2.jpg">
-                        <div class="name">吴飞伟</div>
-                        <p>目前主要负责后端架构设计工作，具有丰厚的一线开发经验与架构经验，喜欢钻研各种源码，曾任某知名高校负责后端架构，教学中注重互动，乐于分享。</p>
+                        <div class="name">Becky Chien</div>
+                        <p>目前主要負責後端架構設計工作，具有豐厚的一線開發經驗與架構經驗，喜歡鑽研各種原始碼，曾任某知名高校負責後端架構，教學中注重互動，樂於分享。</p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t3.jpg">
-                        <div class="name">路明非</div>
-                        <p>知名高校计算机大学教学，专注与网页制作、平面设计、多媒体技术等多个领域，工作认真，风趣幽默的授课方式深受学生们的喜爱。</p>
+                        <div class="name">Jason Tai</div>
+                        <p>知名高校計算機大學教學，專注與網頁製作、平面設計、多媒體技術等多個領域，工作認真，風趣幽默的授課方式深受學生們的喜愛。</p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t4.jpg">
-                        <div class="name">陈子龙</div>
-                        <p>资深软件测试工程师--带领学生团队建立多个大型项目的安全测试工作，精通Jmeter等各种工具的使用，其出品的软件测试系列教学视频收到学生的一致好评。</p>
+                        <div class="name">Peter Lin</div>
+                        <p>資深軟件測試工程師--帶領學生團隊建立多個大型項目的安全測試工作，精通Jmeter等各種工具的使用，其出品的軟件測試系列教學影片收到學生的一致好評。</p>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="more" href="#" th:href="@{/teachers}">查看更多</a>
+        <a class="more" href="#" th:href="@{/teachers}">顯示更多</a>
     </div>
 </div>
 </body>

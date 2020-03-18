@@ -14,31 +14,31 @@
         <div class="col-md-10 offset=md-1">
             <div class="row">
                 <div class="col-md-5 register-left">
-                    <h2>“在线教学直播平台”</h2>
-                    <p>在线教学平台是一款基于OBS直播推流的线上平台，主要用于教师以直播的方式与学生进行在线"教"与"学"，打破了传统的线下教学模式，开启了一种新颖的学习方式。</p>
-                    <p>还未注册账号？</p>
+                    <h2>“線上教學串流平台”</h2>
+                    <p>線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學生線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
+                    <p>還沒註冊帳號？</p>
                     <a href="register-student.html" th:href="@{/register/student}">
-                        <button class="btn btn-dark btn-secondary " type="button">学生注册</button>
+                        <button class="btn btn-dark btn-secondary " type="button">學生註冊</button>
                     </a>
                     <a href="register-teacher.html" th:href="@{/register/teacher}">
-                        <button class="btn btn-dark btn-secondary " type="button">老师注册</button>
+                        <button class="btn btn-dark btn-secondary " type="button">老師註冊</button>
                     </a>
                 </div>
                 <div class="col-md-7 register-right">
-                    <h4>用户登录</h4>
+                    <h4>使用者登入</h4>
                     <h4 style="color: red; text-align: center" th:text="${message}"></h4>
                     <form class="register-form" method="post" th:action="@{/login}">
                         <div class="form-group">
-                            <input class="form-control" name="id" placeholder="学号/工号" required type="text"/>
+                            <input class="form-control" name="id" placeholder="學號/工號" required type="text"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="password" placeholder="密码" required type="password"/>
+                            <input class="form-control" name="password" placeholder="密碼" required type="password"/>
                         </div>
                         <div class="well well-sm" style="text-align:center;margin-bottom: 10px;">
-                            <input checked name="kind" required type="radio" value="student"> 学生
-                            <input name="kind" required type="radio" value="teacher"> 老师
+                            <input checked name="kind" required type="radio" value="student"> 學生
+                            <input name="kind" required type="radio" value="teacher"> 老師
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">登录</button>
+                        <button class="btn btn-primary btn-block" type="submit">登入</button>
                     </form>
                 </div>
             </div>

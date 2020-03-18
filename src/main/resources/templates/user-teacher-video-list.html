@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>我的视频</title>
+    <title>我的影片</title>
     <meta charset="UTF-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
@@ -36,20 +36,20 @@
                                 课程：<span class="class-category" th:text="${videoVM.course.name}">网页制作</span>
                             </p>
                             <p>
-                                年级：<span th:text="${videoVM.grade}">2016</span>
+                                年級：<span th:text="${videoVM.grade}">2016</span>
                             </p>
                             <p>
-                                资料：<a class="btn" href="#" th:href="@{/video/material/}+${videoVM.videoMaterial.id}"
-                                      th:if="${videoVM.videoMaterial}">下载</a>
+                                資料：<a class="btn" href="#" th:href="@{/video/material/}+${videoVM.videoMaterial.id}"
+                                      th:if="${videoVM.videoMaterial}">下載</a>
                             </p>
                             <form method="post" style="float: right; margin-right: 50px;"
                                   th:action="@{/video/}+${videoVM.id}">
                                 <input hidden name="_method" value="delete"/>
-                                <button class="btn btn-danger" type="submit">删除视频</button>
+                                <button class="btn btn-danger" type="submit">删除影片</button>
                                 <a class=" btn ml-auto " href="#"
-                                   th:href="@{/video/}+${videoVM.id}">观看视频</a>
+                                   th:href="@{/video/}+${videoVM.id}">观看影片</a>
                                 <a class=" btn ml-auto " href="#"
-                                   th:href="@{/homework/listByVideoId/}+${videoVM.id}">批改作业</a>
+                                   th:href="@{/homework/listByVideoId/}+${videoVM.id}">批改作業</a>
                             </form>
                         </div>
                     </div>

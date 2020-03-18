@@ -30,12 +30,12 @@ public class LiveDaoTest {
         live.setName("test_live_name");
         live.setStartTime("12:00");
         liveDao.save(live);
-        liveDao.findById(live.getId()).orElseThrow(() -> new RuntimeException("数据库插入直播信息失败"));
+        liveDao.findById(live.getId()).orElseThrow(() -> new RuntimeException("数据库插入串流信息失败"));
 
         // 测试修改
         live.setName("update_live_name");
         liveDao.save(live);
-        Live liveTestUpdate = liveDao.findById(live.getId()).orElseThrow(() -> new RuntimeException("数据库插入直播信息失败"));
+        Live liveTestUpdate = liveDao.findById(live.getId()).orElseThrow(() -> new RuntimeException("数据库插入串流信息失败"));
         assert liveTestUpdate.getName().equals(live.getName());
 
         // 测试删除

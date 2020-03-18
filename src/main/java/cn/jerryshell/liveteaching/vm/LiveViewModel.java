@@ -43,8 +43,9 @@ public class LiveViewModel {
         Teacher teacher = teacherService.findById(live.getTeacherId());
         liveVM.setTeacher(teacher);
 
-        liveVM.setPushUrl("rtmp://" + liveServerIp + "/live/" + teacher.getId());
-
+        liveVM.setPushUrl("http://" + liveServerIp + "/live/" + teacher.getId());
+//        liveVM.setPushUrl("rtmp://" + "127.0.0.1" + "/live/" + teacher.getId());
+        
         Course course = courseService.findById(live.getCourseId());
         liveVM.setCourse(course);
 

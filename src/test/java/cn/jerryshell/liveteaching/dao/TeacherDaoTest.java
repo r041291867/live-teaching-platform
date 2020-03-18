@@ -22,12 +22,12 @@ public class TeacherDaoTest {
         teacher.setNickname("test_tea_nick");
         teacher.setPassword("test_tea_password");
         teacherDao.save(teacher);
-        teacherDao.findById(teacher.getId()).orElseThrow(() -> new RuntimeException("数据库插入老师信息失败"));
+        teacherDao.findById(teacher.getId()).orElseThrow(() -> new RuntimeException("数据库插入老師信息失败"));
 
         // 测试修改
         teacher.setNickname("update_nick");
         teacherDao.save(teacher);
-        Teacher teacherTestUpdate = teacherDao.findById(teacher.getId()).orElseThrow(() -> new RuntimeException("数据库更新老师信息失败"));
+        Teacher teacherTestUpdate = teacherDao.findById(teacher.getId()).orElseThrow(() -> new RuntimeException("数据库更新老師信息失败"));
         assert teacher.getNickname().equals(teacherTestUpdate.getNickname());
 
         // 测试删除
