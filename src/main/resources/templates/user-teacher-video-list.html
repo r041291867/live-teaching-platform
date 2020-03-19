@@ -9,12 +9,13 @@
     <link href="css/zhibo.css" rel="stylesheet" th:href="@{/css/zhibo.css}">
     <link href="css/user-left.css" rel="stylesheet" th:href="@{/css/user-left.css}">
     <link href="css/user-right.css" rel="stylesheet" th:href="@{/css/user-right.css}">
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
 </head>
 <body>
 
-<!--导航栏-->
+<!--header-->
 <div th:replace="header::header"></div>
-<!--导航栏-->
+<!--header-->
 <div class="container userPage">
     <div class="row">
         <div class="col-3" id="left-info">
@@ -33,7 +34,7 @@
                             <div></div>
                             <br/>
                             <p>
-                                课程：<span class="class-category" th:text="${videoVM.course.name}">网页制作</span>
+                                課程：<span class="class-category" th:text="${videoVM.course.name}">网页制作</span>
                             </p>
                             <p>
                                 年級：<span th:text="${videoVM.grade}">2016</span>
@@ -47,7 +48,7 @@
                                 <input hidden name="_method" value="delete"/>
                                 <button class="btn btn-danger" type="submit">删除影片</button>
                                 <a class=" btn ml-auto " href="#"
-                                   th:href="@{/video/}+${videoVM.id}">观看影片</a>
+                                   th:href="@{/video/}+${videoVM.id}">觀看影片</a>
                                 <a class=" btn ml-auto " href="#"
                                    th:href="@{/homework/listByVideoId/}+${videoVM.id}">批改作業</a>
                             </form>

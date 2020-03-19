@@ -39,7 +39,6 @@ select {
     height: 200px;
     padding-left: 50px;
     border-left: 4px solid rgb(23, 162, 184);
-    border-bottom: 1px solid rgb(23, 162, 184);
     border-bottom-right-radius: 15px;
     font-family: "microsoft yahei";
     background-color: rgb(248, 249, 250);

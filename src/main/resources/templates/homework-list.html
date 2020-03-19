@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>作業批改</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
 </head>
 <body>
 <h2 style="float: right;">
@@ -13,8 +14,8 @@
     <thead>
     <tr>
         <th>作業 id</th>
-        <th>學生 id</th>
-        <th>學生暱稱</th>
+        <th>學員 id</th>
+        <th>學員暱稱</th>
         <th>影片 id</th>
         <th>影片名稱</th>
         <th>分數</th>
@@ -25,8 +26,8 @@
     <tbody>
     <tr th:each="homeworkVM:${homeworkVMList}">
         <td th:text="${homeworkVM.id}">作業 ID</td>
-        <td th:text="${homeworkVM.student.id}">學生 ID</td>
-        <td th:text="${homeworkVM.student.nickname}">學生暱稱</td>
+        <td th:text="${homeworkVM.student.id}">學員 ID</td>
+        <td th:text="${homeworkVM.student.nickname}">學員暱稱</td>
         <td th:text="${homeworkVM.video.id}">影片 ID</td>
         <td th:text="${homeworkVM.video.name}">影片名稱</td>
         <td>

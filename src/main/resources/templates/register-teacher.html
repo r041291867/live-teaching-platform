@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link href="css/loginStyle.css" rel="stylesheet" th:href="@{/css/loginStyle.css}"/>
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
     <title>老師注册</title>
     <!-- <style>
         body {
@@ -17,19 +18,21 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-10 offset=md-1">
+        <div class="col-md-11 offset=md-1">
             <div class="row">
-                <div class="col-md-5 register-left">
-                    <h2>“在线教学串流平台”</h2>
-                    <p>線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學生線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
+                <div class="col-md-7 register-left">
+                    <h2>“富士康大學線上教學平台”</h2>
+                    <p>富士康大學線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學員線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
+                    <img src="/img/foxconn.png" style="width: 200px;"> 
                     <p>已有帳號？</p>
+                    
                     <a href="login.html" th:href="@{/login}">
                         <button class="btn btn-dark btn-secondary"
                                 type="button">登入帳號
                         </button>
                     </a>
                 </div>
-                <div class="col-md-7 register-right">
+                <div class="col-md-5 register-right">
                     <h4>老師注册</h4>
                     <h4 style="color: red; text-align: center" th:text="${message}"></h4>
                     <form class="register-form" method="post" th:action="@{/register/teacher}">

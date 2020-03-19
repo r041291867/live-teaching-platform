@@ -6,39 +6,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
     <link href="css/video.css" rel="stylesheet" th:href="@{/css/video.css}">
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
 </head>
 <body>
 
-<!--导航栏-->
+<!--header-->
 <div th:replace="header::header"></div>
-<!--导航栏-->
+<!--header-->
 
 <!--轮播图-->
 <div class="container banner">
     <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-banner">
         <ol class="carousel-indicators">
-            <!-- <li class="" data-slide-to="0" data-target="#carousel-banner"
-                th:data-slide-to="${iterStatus.index}"
-                th:each="carousel, iterStatus:${carouselList}"></li> -->
             <li data-target="carousel-banner" data-slide-to="0" class="active"></li>
             <li data-target="carousel-banner" data-slide-to="1"></li>
-            <li data-target="carousel-banner" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <!-- <a class="carousel-item" href="#"
-               th:class="${iterStatus.index}==0?'carousel-item active':'carousel-item'"
-               th:each="carousel, iterStatus:${carouselList}"
-               th:href="@{/video/}+${carousel.videoId}">
-                <img alt="" class="d-block w-100" src="img/bg1.jpg" th:src="@{/img/}+${carousel.imageName}">
-            </a> -->
             <div class="carousel-item active">
-              <img src="img/bg1.jpg" class="d-block w-100" alt="bg1">
+              <img src="img/bg5.jpg" class="d-block w-100" alt="bg2">
             </div>
             <div class="carousel-item">
-              <img src="img/bg4.png" class="d-block w-100" alt="bg2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/bg5.jpg" class="d-block w-100" alt="bg3">
+              <img src="img/bg4.png" class="d-block w-100" alt="bg3">
             </div>
         </div>
         <a class="carousel-control-prev" data-slide="prev" href="#carousel-banner">
@@ -52,7 +40,22 @@
 <script charset="UTF-8" src="js/jquery-3.4.0.min.js" th:href="@{/js/jquery-3.4.0.min.js}"></script>
 <script charset="UTF-8" src="js/bootstrap.min.js" th:href="@{/js/bootstrap.min.js}"></script>
 <!--轮播图-->
+<!--名师推荐-->
+<div class="container teachers">
+    <div class="tetimonials">
+        <div class="inner">
+            <h4 class="subtitle">富士康簡介</h4>
+            <div class="border"></div>
+            <div style="background:#fff; padding:30px; border-radius:10px; border: none; text-align: left;">
+            <p>創立於1974年，富士康科技集團在創辦人郭台銘先生領導下，以“兩地研發(Time to market)、三區設計製造(Time to volume)、全球組裝交貨(Time to money)”做為集團佈局策略，並創造出『IIDM-SM』(整合、創新、設計、製造、銷售、行銷)整體解決方案的3C電子商業服務模式，帶領集團於2018年營收突破新台幣5.2兆，獲得美國財富雜誌《Fortune》評比為全球百大企業第24名。富比士雜誌《Forbes》2018年全球2000 大企業中名列第105名，並分别名列「頂尖跨國企業榜」第8名、「全球最佳企業僱主榜」第215名。</p>
 
+			<p>作為科技服務的領先者，近年來集團積極運用「硬軟整合、實虛結合」，深度佈局「雲、移、物、大、智、網 + 機器人」，掌握工業互聯網產業DT(Data Tech)、AT(Analytics Tech)、PT(Platform Tech)、OT(Operations Tech)四大關鍵技術，投資並充分利用集團在雲計算，移動設備，物聯網，大數據，人工智能，網絡，機器人及自動化方面的專業知識。全力構建「8K + 5G」生態系統，應用在八大生活領域，將集團發展為六流(訊流、金流、技術流，人流、過程流、物流)科技公司。</p>
+
+			<p>《麻省理工科技評論》2017年度“全球50大最聰明公司”榜單第33位。截至2017年底，集團全球專利申請已累計146,200件，核准量達到83,600件。2017年台灣地區申請量排名第2，公告排名第1；根據全球專利資料庫調查，鴻海2006-2017年連續12年在美國專利核准量排行榜位居華人企業前列，2017年共取得美國專利達631項，排名居全球第56名、華人企業第6名。</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--名师推荐-->
 <div class="container teachers">
@@ -64,29 +67,29 @@
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t1.jpg">
-                        <div class="name">Raymond Liu</div>
-                        <p>軟件開發工程師--十餘年的開發經歷，精通java、Python、PHP等編程語言，喜歡籃球與攝影，目前在學校作為一名教師進行Python教學。</p>
+                        <div class="name">陳振國</div>
+                        <p>目前擔任富士康科技集團副總裁兼任富士康大學校長，負責集團員工培訓及生產力提升工作。 陳振國博士加入富士康科技集團之前,曾任美國德州大學泛美分校理工學院院長，發表了120余篇學術論文，指導博士畢業生20余位。 </p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t2.jpg">
-                        <div class="name">Becky Chien</div>
+                        <div class="name">謝建中</div>
                         <p>目前主要負責後端架構設計工作，具有豐厚的一線開發經驗與架構經驗，喜歡鑽研各種原始碼，曾任某知名高校負責後端架構，教學中注重互動，樂於分享。</p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t3.jpg">
-                        <div class="name">Jason Tai</div>
-                        <p>知名高校計算機大學教學，專注與網頁製作、平面設計、多媒體技術等多個領域，工作認真，風趣幽默的授課方式深受學生們的喜愛。</p>
+                        <div class="name">吳信輝</div>
+                        <p>知名高校計算機大學教學，專注與網頁製作、平面設計、多媒體技術等多個領域，工作認真，風趣幽默的授課方式深受學員們的喜愛。</p>
                     </div>
                 </div>
                 <div class="colT">
                     <div class="testimonial">
                         <img alt="" src="/img/t4.jpg">
                         <div class="name">Peter Lin</div>
-                        <p>資深軟件測試工程師--帶領學生團隊建立多個大型項目的安全測試工作，精通Jmeter等各種工具的使用，其出品的軟件測試系列教學影片收到學生的一致好評。</p>
+                        <p>資深軟件測試工程師--帶領學員團隊建立多個大型項目的安全測試工作，精通Jmeter等各種工具的使用，其出品的軟件測試系列教學影片收到學員的一致好評。</p>
                     </div>
                 </div>
             </div>

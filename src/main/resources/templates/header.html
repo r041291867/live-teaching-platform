@@ -8,7 +8,7 @@
 <div class="container menu navs" th:fragment="header">
     <nav class="navbar  navbar-expand-sm navbar-fixed-top navbar-light ">
         <a class="navbar-brand logoBlack" href="#" th:href="@{/}">
-            <img src="/img/logoBlack.png" style="width: 55px;">
+            <img src="/img/hh.png" style="width: 55px;">
         </a>
         <ul class="nav navbar-nav">
             <li class="nav-item">
@@ -36,14 +36,14 @@
 						</span>
             </li>
             <li class="nav-item">
+                <strong class="nav-link" th:text="${session.loginUserKind}=='student'?'學員':'老師'">學員</strong>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#" th:href="@{/user}">
                     <strong th:text="${session.loginUserNickname}">暱稱</strong>
                 </a>
-
             </li>
-            <li class="nav-item">
-                <strong class="nav-link" th:text="${session.loginUserKind}=='student'?'學生':'老師'">學生端</strong>
-            </li>
+            
         </ul>
     </nav>
 </div>

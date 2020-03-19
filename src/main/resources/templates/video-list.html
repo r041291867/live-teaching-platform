@@ -6,12 +6,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link href="css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
     <link href="css/video.css" rel="stylesheet" th:href="@{/css/video.css}">
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
 </head>
 <body>
 
-<!--导航栏-->
+<!--header-->
 <div th:replace="header::header"></div>
-<!--导航栏-->
+<!--header-->
 
 <div class="container">
     <!-- 选项卡菜单-->
@@ -38,7 +39,7 @@
                         <div class="nav smallTeacher">
 						<span>
                             <li class="nav-teacher">
-                                <img src="/img/teacher.jpg">
+                                <img src="/img/teacher.png">
                             </li>
                         </span>
                             <span class="borderLine"></span>
@@ -47,7 +48,7 @@
                         <div class="nav class-bottom">
                             <span class="ml-auto lesson-category" style="width: 60%;" th:text="${videoVM.course.name}">Java</span>
                         </div>
-                        <a class="btn" href="#" th:href="@{/video/}+${videoVM.id}">观看回放</a>
+                        <a class="btn" href="#" th:href="@{/video/}+${videoVM.id}">觀看回播</a>
                     </div>
                 </div>
             </div>

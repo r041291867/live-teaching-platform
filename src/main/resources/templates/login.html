@@ -5,26 +5,21 @@
     <meta charset="utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link href="css/loginStyle.css" rel="stylesheet" th:href="@{/css/loginStyle.css}"/>
+    <link rel="Shortcut Icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
     <title>登录</title>
 </head>
 
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-10 offset=md-1">
+        <div class="col-md-11 offset=md-1">
             <div class="row">
-                <div class="col-md-5 register-left">
-                    <h2>“線上教學串流平台”</h2>
-                    <p>線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學生線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
-                    <p>還沒註冊帳號？</p>
-                    <a href="register-student.html" th:href="@{/register/student}">
-                        <button class="btn btn-dark btn-secondary " type="button">學生註冊</button>
-                    </a>
-                    <a href="register-teacher.html" th:href="@{/register/teacher}">
-                        <button class="btn btn-dark btn-secondary " type="button">老師註冊</button>
-                    </a>
+                <div class="col-md-7 register-left">
+                    <h2>“富士康大學線上教學平台”</h2>
+                    <p>富士康大學線上教學平台是一款基于OBS影音串流的線上平台，主要用於教師以串流的方式與學員線上進行"教"與"學"，打破了傳統的線下教學模式，開啟了一種新型的教學方式。</p>
+                    <img src="/img/foxconn.png" style="width: 200px;">   
                 </div>
-                <div class="col-md-7 register-right">
+                <div class="col-md-5 register-right">
                     <h4>使用者登入</h4>
                     <h4 style="color: red; text-align: center" th:text="${message}"></h4>
                     <form class="register-form" method="post" th:action="@{/login}">
@@ -35,11 +30,20 @@
                             <input class="form-control" name="password" placeholder="密碼" required type="password"/>
                         </div>
                         <div class="well well-sm" style="text-align:center;margin-bottom: 10px;">
-                            <input checked name="kind" required type="radio" value="student"> 學生
+                            <input checked name="kind" required type="radio" value="student"> 學員
                             <input name="kind" required type="radio" value="teacher"> 老師
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">登入</button>
                     </form>
+                    <div style="text-align: center;">
+	                    <p>還沒註冊帳號？</p>
+	                    <a href="register-student.html" th:href="@{/register/student}">
+	                        <button class="btn btn-dark btn-secondary " type="button">學員註冊</button>
+	                    </a>
+	                    <a href="register-teacher.html" th:href="@{/register/teacher}">
+	                        <button class="btn btn-dark btn-secondary " type="button">老師註冊</button>
+	                    </a>
+                    </div>
                 </div>
             </div>
 
