@@ -1,4 +1,4 @@
-# 在线教学串流平台
+# 線上教學串流平台
 
 基于 Spring Boot 和 [SRS](https://github.com/ossrs/srs)
 
@@ -9,7 +9,7 @@
 * 串流提醒
 * 作業上傳和批改
 
-# live-teaching-platform 使用教學（on Mac）
+## live-teaching-platform 使用教學（on Mac）
 1. 使用docker安裝mysql、srs:
 ```
 docker run --name mysql  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=ibdo -d mysql:5.6
@@ -28,7 +28,7 @@ docker run -p 1935:1935 -p 1985:1985 -p 8082:8080 ossrs/srs:3
 9. 下拉選單空白的處理方法：
 資料庫裡面course及major的表內新增資料即可
 - - - -
-# 使用OBS 開始直播並推送到SRS伺服器
+## 使用OBS 開始直播並推送到SRS伺服器
 1. 根據上部docker安裝的SRS，本地推送伺服器ip為：
 > rtmp:  
 > rtmp://127.0.0.1/live/**livestream** <- 可自訂  
